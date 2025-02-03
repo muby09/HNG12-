@@ -19,7 +19,9 @@ JSON format
 }
 
 ## Example Usage
-You can test the API using tools like Postman or directly in your browser by navigating to `http://localhost:8000/index.php`.
+Install Xampp 
+  Copy project to htdocs
+  Run Locally using tools like Postman or directly in your browser by navigating to `http://localhost:8000/index.php`.
 
 ## Backlink
 For more information on PHP development, visit [HNG PHP Developers](https://hng.tech/hire/php-developers).
