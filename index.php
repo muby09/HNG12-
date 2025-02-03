@@ -1,8 +1,20 @@
+
 <?php
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *"); // Allow all origins for CORS
 
-$url = "http://localhost/apitestx/api/api_index.php";
+// Function to get current datetime in ISO 8601 format
+function getCurrentDatetime() {
+    return (new DateTime('now', new DateTimeZone('UTC')))->format(DateTime::ATOM);
+}
 
-$data = file_get_contents($url);
+// Prepare the response
+$response = [
+    "email" => "jnr0.mubarak@gmail.com",
+    "current_datetime" => getCurrentDatetime(),
+    "github_url" => "https://github.com/muby09?tab=repositories" 
+];
 
-echo "<pre>";
-echo $data;
+
+http_response_code(200); / OK
+echo json_encode($response);
